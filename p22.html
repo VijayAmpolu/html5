@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         canvas{
+           width: 500px;
+            height: 500px;
+            border: 3px solid #0c0c0c;
+            margin: auto;
+            display: block;
+    }
+    </style>
+</head>
+<body>
+    <h1>example to create the rectangle in canvas tag</h1>
+     <p>by using rect we can create the rectangles</p>  
+     
+     <canvas id="canvas2"></canvas>
+        <script>
+            const canvas2 = document.getElementById('canvas2').geyContext('2d');
+            canvas2.fillstyle = "red;"
+            canvas2.rect(50,50,100,50);//x-axis,y-axis,width,height
+            canvas2.fill();
+            canvas2.stroke();
+        </script>
+     
+</body>
+</html>

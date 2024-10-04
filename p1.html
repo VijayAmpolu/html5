@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .audio *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .left p{
+            font-size: 0.9rem;
+            color: darkgray;
+        }
+        .audio{
+            width: 80%;
+            background-color: rgba(191, 191, 191, 0.283);
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .left{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .right button{
+            border: none;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-radius: 100px;
+            cursor: pointer;
+
+        }
+        .right button:hover{
+            border: 1px solid #000;
+        }
+        .right button a{
+            text-decoration: none;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+   <center>
+    <h1>MEDIA TAGS</h1>
+   </center>
+
+   <hr>
+   <h1>Displaying audios in websites using audio tag</h1>
+   <h1>Example1</h1>
+   <audio src="./assets/media/example_audio.mp3" controls muted autoplay loop></audio>
+
+   <h1>Example2</h1>
+   <audio controls muted loop autoplay>
+    <source src="./assets/media/example_audio.mp3">
+   </audio>
+    
+   <h2>example3</h2>
+   <div class="audio">
+   <div class="left">
+    <audio src="./assets/media/example_audio.mp3" controls></audio>
+    <img src="" alt="">
+    <div>
+        <h4>Radiant Surge</h4>
+        <p>Top-Flow</p>
+    </div>
+   </div>
+   <div class="right">
+    <button><a href="" download="./assets/media/example_audio.mp3">Download</a></button>
+   </div>
+
+   </div>
+
+   <div class="audio">
+    <div class="left">
+     <audio src="./assets/media/example_audio.mp3" controls></audio>
+     <img src="" alt="">
+     <div>
+         <h4>Radiant Surge</h4>
+         <p>Top-Flow</p>
+     </div>
+    </div>
+    <div class="right">
+     <button><a href="" download="./assets/media/example_audio.mp3">Download</a></button>
+    </div>
+ 
+    </div>
+
+    <iframe src="./assets/media/example_audio.mp3" frameborder="0"></iframe>
+</body>
+</html>

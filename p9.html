@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        meter{
+            width: 400px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Default tag</h1>
+    <meter></meter>
+
+    <h1>static meter tag</h1>
+    <meter value="50" min="0" max="100"></meter><br>
+    <meter value="40" min="0" max="100"></meter><br>
+    <meter value="30" min="0" max="100"></meter><br>
+    <meter value="20" min="0" max="100"></meter><br>
+    <meter value="10" min="0" max="100"></meter><br>
+
+    <h1>LOw and High attributes</h1>
+    <meter value="50" min="0" max="100" low="20" high="80"></meter>
+
+    <h1>Dynamic mater tag</h1>
+    <meter value="0" min="0" max="100" low="30" high="70" id="m1"></meter>
+    <small id="result"></small>
+    
+
+    <script>
+        let metertag = document.getElementById('m1'); 
+        let result = document.getElementById('result');
+
+        function drivestoarge(){
+        metertag.value++
+        } 
+        
+         </script>
+</body>
+</html>

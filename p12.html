@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>semantic tags in html5</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        section{
+            display: flex;
+            gap:20px;
+            background-color: rgb(12, 5, 5);
+            padding: 20px;
+            height: 120vh;
+            align-items: center;
+        }
+        section aside{
+            background-color: rgb(28, 28, 28);
+            height: 120vh;
+            flex: 1;
+            border-radius: 20px;
+            padding: 20px;
+            color: #fff;
+        }
+        section .content{
+            background-color: rgb(27, 27, 27);
+            height: 55vh;
+            flex: 3;
+            border-radius: 20px;
+            margin-top: -430px;
+        }
+
+
+        /* profile  */
+        .profile{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+        .profile img{
+            width: 60px;
+            border-radius: 100px;
+        }
+        .subtitle{
+            color: gray;
+        }
+        .devider{
+            height: 1px;
+            width: 100%;
+            background-color: rgb(53, 53, 53);
+        }
+        aside ul{
+            list-style-type: none;
+            padding: 0px;
+        }
+        aside ul li{
+            font-size: 1.1rem;
+            padding: 10px;
+           
+            margin-top: 8px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+        aside ul li:hover{
+            background-color: #292929b0;
+        }
+        .cards{
+            padding: 30px;
+            gap: 20px;
+            display: flex;
+        }
+        .card-left{
+            flex: 1;
+            height: 300px;
+            background-color: #181818;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card-right{
+            flex: 1;
+            height: 300px;
+            background-color: #181818;
+        }
+        .circle{
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(#e0e0e027, #2b2b2bac);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            /* border-right: 1px solid #ccc; */
+            color: #ababab;
+            outline: 30px solid #48484811;
+            position: relative;
+            transition: 1s;
+            cursor: pointer;
+        }
+        .circle:hover{
+            outline: 40px solid #48484811;
+        }
+        .circle:hover:before{
+            transform: scale(1.5);
+            transition: 1s;
+        }
+        .circle::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: transparent;
+            border: 1px solid #4444445f;
+            border-radius: 50%;
+            transform: scale(1.4);
+        }
+        .circle h1{
+            font-size: 5rem;
+        }
+        .circle p{
+            font-size: 1.3rem;
+        }
+        .card-right img{
+            align-items: center;
+            justify-content: center;
+            padding: 10px;
+        }
+        .container{
+            height: 200px;
+            background-color: #222;
+           margin-top: 20px;
+           padding: 20px;
+           margin: auto;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+           gap: 30px;
+           border: none;
+           border-radius: 20px;
+
+        }
+        .container p button{
+            height: 100px;
+            width: 200px;
+            margin-bottom: 45px;
+            color: white;
+            background-color: rgb(91, 81, 81);
+            border-radius: 10px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            padding: 10px;
+            box-shadow: 5px 0px 0px black;
+            
+        }
+        .container p button:hover{
+            cursor: pointer;
+            transition: 0.2s;
+            transform: translateY(-10px);
+        }
+        .point{
+            color: white;
+            text-align: center;
+            margin-top: -60px;
+        }
+        .buttons{
+            height: 250px;
+            width: 500px;
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding-top: 50px;
+            margin-left: 450px;
+            margin-top: -260px;
+            border-radius: 20px;
+            
+            
+        }
+        .buttons button{
+            height: 40px;
+            width: 130px;
+            border-radius: 30px 30px 30px 30px;
+            padding: 3px;
+            border: none;
+            text-align: center;
+            margin-bottom: 10px;
+            text-align: center;
+            background: linear-gradient(grey,grey,black,black);
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+        }
+</style>
+</head>
+<body>
+    <!-- <center>
+        <h3>ASIDE TAG..!</h3>
+        <p>The ASIDE element represent the content which is indirectly giving information to the main content of the page. It is frequently represented as a sidebar.</p>
+    </center> -->
+
+
+    <section>
+        <aside>
+            <div class="profile">
+                <img src="https://cdn.prod.website-files.com/66c329237d44dd5e805c960e/66c32992a09b676048f92c4d_Weblcip.png" alt="profile">
+                <div>
+                    <h3>Florent Ademaj</h3>
+                    <p class="subtitle">Webflow Developer</p>
+                </div>
+            </div>
+
+            <ul>
+                <li><i class="fa-solid fa-house"></i> Home</li>
+                <li><i class="fa-solid fa-folder-open"></i> Projects</li>
+                <div class="devider"></div>
+                <li><i class="fa-solid fa-id-card"></i> About me</li>
+                <li><i class="fa-solid fa-address-book"></i> Contact me</li>
+               <div class="devider"></div>
+                <li><i class="fa-solid fa-star"></i> Style Guid</li>
+                <li><i class="fa-solid fa-circle-info"></i> Help</li>
+                <li><i class="fa-solid fa-book"></i> Licencing</li>
+            </ul>
+        </aside>
+        <div class="content">
+            <div class="cards">
+                <div class="card-left">
+                    <div class="circle">
+                      <div>
+                        <h1>62</h1>
+                        <p>Projects</p>
+                      </div>
+                    </div>
+                </div>
+                <div class="card-right">
+                    <img src="https://cdn.prod.website-files.com/66c329237d44dd5e805c960e/66c3451ce9c082e57925a5db_About%20Me%20Image-p-800.jpg" alt="loading.." width="500px"
+                    height="300px">
+                    <br>
+                </div> <br>
+            </div>
+            <div class="container">
+                <p><button>62 <br>Projects</button></p>
+                <p><button>5+ <br>Years</button></p>
+                <p><button>1995 <br>Born</button></p>
+                <br> <br>
+            </div>
+            <div class="point">
+                <h3>OVERVIEW</h3> 
+             <p>Everything's fact</p>
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <div class="buttons">
+            <button><i class="fa-solid fa-music"></i>Good music</button>
+            <button><i class="fa-solid fa-volleyball"></i>Foot ball</button>
+            <button><i class="fa-solid fa-mitten"></i>Boxing</button> <br>
+            <button>camping</button>
+            <button><i class="fa-solid fa-motorcycle"></i>Riding</button>
+            <button><i class="fa-solid fa-book"></i>Memes</button> <br>
+            <button><i class="fa-solid fa-map-pin"></i>Cooking</button>
+            <button><i class="fa-solid fa-gamepad"></i>Gaming</button>
+             <br>
+            <p style="font-weight: bold; font-size: 1.1rem;">Things I Like</p>
+            <p style="font-size: 1.1rem;">Some of my fav stuff</p>
+        </div>
+        <div class="buttons" style="margin-left: 980px; margin-top: -250px;">
+            <button><i class="fa-brands fa-facebook"></i>Facebook</button>
+            <button><i class="fa-brands fa-square-instagram"></i>Instagram</button>
+            <button><i class="fa-brands fa-twitter"></i>Twitter</button> 
+            <button><i class="fa-solid fa-envelope"></i>Email Me</button>
+            <button><i class="fa-solid fa-street-view"></i>My Location</button><br>
+            <button><i class="fa-solid fa-circle-plus"></i>Hire Me</button>
+            <br>
+            <p style="font-weight: bold; font-size: 1.1rem;">My Links</p>
+            <p style="font-size: 1.1rem;">Everything you need</p>
+            
+        </div>
+    </div>
+
+</body>
+</html>

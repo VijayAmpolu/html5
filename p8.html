@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        progess{
+            accent-color: blue;
+            width: 300px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Desult Progress Bars</h1>
+    <progress></progress>
+
+    <h1>static progress bars</h1>
+    <progress value="30" min="0" max="100"></progress>
+
+    <h1>Dynamic progress bars</h1>
+    <progress value="0" min="0" max="100" id="p1"></progress>
+    <small id="result"></small>
+
+    <script>
+        const progesstag = document.getElementById('p1')
+        const result = document.getElementById('result')
+
+        function downloadhandler(){
+            result.innertext = 'Downloading'+ progresstag.value + '%'
+            if(progresdtsg.value == 100){
+                result.inner
+            }
+        }
+    </script>
+</body>
+</html>

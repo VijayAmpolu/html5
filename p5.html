@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>popups</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        dialog{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            left: 0px;
+            top: 0;
+            background-color: gray;
+            outline: none !important;
+            border: none;
+
+        }
+        .card{
+            width: 280px;
+            min-height: 300px;
+            background-color: white;
+            border-radius: 10px;
+            margin: auto;
+            box-shadow: opx 0px 2px gray;
+            margin-top: 50px ;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .top{
+            height: 130px;
+            background-color: yellow;
+        }
+        .image{
+            width: 80px;
+            height: 80px;
+            box-shadow: none0px 0px 3px white;
+            border-radius: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            transform: translateY(-40px);
+            background-color: white;
+
+        }
+        .image img{
+            width: 50px;
+        }
+        .text{
+            text-align: center;
+            padding: 10px;
+            padding-bottom: 30px;
+        }
+        .text p{
+            color: gray;
+        }
+        .text.dark-btn{
+            border: none !important;
+            padding: 8px;
+            background-color: blue;
+            color: white;
+            border-radius: 100px;
+            outline: none;
+            margin-top: 20px;
+            width: 80px;
+        }
+        .text.light-btn{
+            border: none;
+            outline: none;
+            width: 80px;
+            background: transparent;
+            display: block;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .test{
+            font-size: 1.3rem;
+            line-height: 2;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showpopup1()">popup1</button>
+    <p class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae obcaecati quidem laborum, eveniet, temporibus illo laudantium porro minima amet dolor sunt nihil harum perspiciatis quod beatae nostrum mollitia. Nemo, ipsam.</p>
+    <dialog id="popup1" onclick="closepopup1()">
+       <div class="card">
+        <div class="top">
+
+        </div>
+        
+        <div class="image">
+               <img src="" alt="loading">
+        </div>
+        <div class="text">
+             <h3>Congrates julia!!!</h3>
+             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat mollitia laudantium, </p>
+             <button class="dark-btn">Share</button>
+             <button class="light-btn">Skip</button>
+        </div>
+       </div>
+    </dialog>
+
+
+    <script>
+        let popup1 = document.getElementById(popup1)
+        function showpopup1(){
+            popup1.show();
+        }
+        function closepopup1(){
+            popup1.close();
+        }
+    </script>
+</body>
+</html>
